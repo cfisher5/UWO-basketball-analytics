@@ -1,0 +1,21 @@
+CREATE TABLE `UWO_tracking`.`data` (
+  `posID` INT NOT NULL AUTO_INCREMENT,
+  `gameID` INT NULL,
+  `screens` INT NULL,
+  `passes` INT NULL,
+  `type` VARCHAR(45) NULL,
+  `result` VARCHAR(45) NULL,
+  `contested` TINYINT NULL,
+  `game_clock` VARCHAR(6) NULL,
+  `quarter` INT NULL,
+  `shot_clock` INT NULL,
+  `x-coord` INT NULL,
+  `y-coord` INT NULL,
+  PRIMARY KEY (`posID`),
+  UNIQUE INDEX `posID_UNIQUE` (`posID` ASC));
+
+ALTER TABLE `UWO_tracking`.`data`
+CHANGE COLUMN `gameID` `gameID` INT(11) NOT NULL ,
+CHANGE COLUMN `contested` `contested` VARCHAR(10) NULL DEFAULT NULL ,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`posID`, `gameID`);

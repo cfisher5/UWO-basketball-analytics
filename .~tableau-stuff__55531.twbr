@@ -1,0 +1,929 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.1102.2300                               -->
+<workbook source-build='10.3.5 (10300.17.1102.2300)' source-platform='mac' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='gameData_edited' inline='true' name='federated.1nf67000w5hs9516r7o8p1jhzvq8' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dataset' name='textscan.1ff06i015ey0sh10jmja01o31qz1'>
+            <connection class='textscan' directory='/Users/ColeFisher/Projects/UWO_Analytics' filename='dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ff06i015ey0sh10jmja01o31qz1' name='gameData_edited.csv' table='[gameData_edited#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='posID' ordinal='0' />
+            <column datatype='date' name='gameID' ordinal='1' />
+            <column datatype='integer' name='screens' ordinal='2' />
+            <column datatype='integer' name='passes' ordinal='3' />
+            <column datatype='string' name='type' ordinal='4' />
+            <column datatype='string' name='result' ordinal='5' />
+            <column datatype='string' name='contested' ordinal='6' />
+            <column datatype='string' name='game_clock' ordinal='7' />
+            <column datatype='integer' name='quarter' ordinal='8' />
+            <column datatype='integer' name='shot_clock' ordinal='9' />
+            <column datatype='integer' name='xcoord' ordinal='10' />
+            <column datatype='integer' name='ycoord' ordinal='11' />
+            <column datatype='integer' name='def_xcoord' ordinal='12' />
+            <column datatype='integer' name='def_ycoord' ordinal='13' />
+            <column datatype='real' name='distance' ordinal='14' />
+            <column datatype='integer' name='shooter' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>posID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[posID]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>posID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gameID</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[gameID]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>gameID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>screens</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[screens]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>screens</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[passes]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>passes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[result]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>result</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contested</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contested]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>contested</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_clock</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[game_clock]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>game_clock</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[quarter]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shot_clock</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[shot_clock]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>shot_clock</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>xcoord</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[xcoord]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>xcoord</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ycoord</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ycoord]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>ycoord</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>def_xcoord</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[def_xcoord]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>def_xcoord</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>def_ycoord</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[def_ycoord]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>def_ycoord</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[distance]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>distance</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shooter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[shooter]</local-name>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias>shooter</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[gameData_edited.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='passes+screens' datatype='integer' name='[Calculation_2257851527290048512]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[passes] + [screens]' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Passes (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[passes]' peg='0' size='1.424' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Screens (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[screens]' peg='0' size='0.865' />
+      </column>
+      <column caption='Contested' datatype='string' name='[contested]' role='dimension' type='nominal' />
+      <column caption='Def Xcoord' datatype='integer' name='[def_xcoord]' role='measure' type='quantitative' />
+      <column caption='Def Ycoord' datatype='integer' name='[def_ycoord]' role='measure' type='quantitative' />
+      <column caption='Distance' datatype='real' name='[distance]' role='measure' type='quantitative' />
+      <column caption='Game ID' datatype='date' name='[gameID]' role='dimension' type='ordinal' />
+      <column caption='Game Clock' datatype='string' name='[game_clock]' role='dimension' type='nominal' />
+      <column caption='Passes' datatype='integer' name='[passes]' role='measure' type='quantitative' />
+      <column caption='Pos ID' datatype='integer' name='[posID]' role='dimension' type='ordinal' />
+      <column caption='Quarter' datatype='integer' name='[quarter]' role='dimension' type='quantitative' />
+      <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+      <column caption='Screens' datatype='integer' name='[screens]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Shooter' datatype='integer' name='[shooter]' role='dimension' type='ordinal' />
+      <column caption='Shot Clock' datatype='integer' name='[shot_clock]' role='measure' type='quantitative' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <column caption='Xcoord' datatype='integer' name='[xcoord]' role='measure' type='quantitative' />
+      <column caption='Ycoord' datatype='integer' name='[ycoord]' role='measure' type='quantitative' />
+      <column-instance column='[passes]' derivation='Avg' name='[avg:passes:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[screens]' derivation='Avg' name='[avg:screens:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[contested]' derivation='None' name='[none:contested:nk]' pivot='key' type='nominal' />
+      <column-instance column='[result]' derivation='None' name='[none:result:nk]' pivot='key' type='nominal' />
+      <mapped-images>
+        <mapped-image caption='basketball-court' expression='file:///Users/ColeFisher/Projects/UWO_Analytics/court-reversed.png' name='[MappedImage1]'>
+          <mapping bottom='0' left='0' right='500' top='472' x='[xcoord]' y='[ycoord]' />
+          <image-options desaturate-image='true' desaturate-pct='0.38' show-entire-image='true' />
+        </mapped-image>
+      </mapped-images>
+      <layout dim-ordering='alphabetic' dim-percentage='0.500907' measure-ordering='alphabetic' measure-percentage='0.499093' rowDisplayCount='150' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1nf67000w5hs9516r7o8p1jhzvq8].[avg:passes:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1nf67000w5hs9516r7o8p1jhzvq8].[avg:screens:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:result:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;make&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;oreb&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;miss&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='shape' field='[none:contested:nk]' type='shape'>
+            <map to=':filled/circle'>
+              <bucket>&quot;high&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;none&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;low&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;loq&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;med&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <sort class='manual' column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 3' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Shot Clock' />
+        <param name='target' value='Sheet 3' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated) 1' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 6' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Shot Clock' />
+        <param name='target' value='Sheet 6' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gameData_edited' name='federated.1nf67000w5hs9516r7o8p1jhzvq8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nf67000w5hs9516r7o8p1jhzvq8'>
+            <column aggregation='None' datatype='integer' name='[Screens (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-1' formula='[screens]' peg='0' size='0.865' />
+            </column>
+            <column-instance column='[screens]' derivation='Count' name='[cnt:screens:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Screens (bin)]' derivation='None' name='[none:Screens (bin):ok]' pivot='key' type='ordinal' />
+            <column caption='Screens' datatype='integer' name='[screens]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='597' />
+                <format attr='maxheight' value='597' />
+                <format attr='minwidth' value='300' />
+                <format attr='maxwidth' value='300' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[cnt:screens:qk]</rows>
+        <cols>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Screens (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Screens (bin):qk]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gameData_edited' name='federated.1nf67000w5hs9516r7o8p1jhzvq8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nf67000w5hs9516r7o8p1jhzvq8'>
+            <column caption='passes+screens' datatype='integer' name='[Calculation_2257851527290048512]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[passes] + [screens]' />
+            </column>
+            <column caption='Contested' datatype='string' name='[contested]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2257851527290048512]' derivation='None' name='[none:Calculation_2257851527290048512:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[contested]' derivation='None' name='[none:contested:nk]' pivot='key' type='nominal' />
+            <column-instance column='[result]' derivation='None' name='[none:result:nk]' pivot='key' type='nominal' />
+            <column-instance column='[shooter]' derivation='None' name='[none:shooter:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[xcoord]' derivation='None' name='[none:xcoord:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ycoord]' derivation='None' name='[none:ycoord:qk]' pivot='key' type='quantitative' />
+            <column caption='Passes' datatype='integer' name='[passes]' role='measure' type='quantitative' />
+            <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+            <column caption='Screens' datatype='integer' name='[screens]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Shooter' datatype='integer' name='[shooter]' role='dimension' type='ordinal' />
+            <column caption='Xcoord' datatype='integer' name='[xcoord]' role='measure' type='quantitative' />
+            <column caption='Ycoord' datatype='integer' name='[ycoord]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:result:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:result:nk]' member='&quot;foul&quot;' />
+                <groupfilter function='member' level='[none:result:nk]' member='&quot;to&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:shooter:ok]'>
+            <groupfilter from='5' function='range' level='[none:shooter:ok]' to='22' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]</column>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:shooter:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='subtitle' class='0' field='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:ycoord:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:ycoord:qk]' scope='rows' value='true' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]' />
+              <shape column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' />
+              <size column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Calculation_2257851527290048512:qk]' />
+              <lod column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:ycoord:qk]</rows>
+        <cols>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:xcoord:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gameData_edited' name='federated.1nf67000w5hs9516r7o8p1jhzvq8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nf67000w5hs9516r7o8p1jhzvq8'>
+            <column-instance column='[passes]' derivation='Avg' name='[avg:passes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[screens]' derivation='Avg' name='[avg:screens:qk]' pivot='key' type='quantitative' />
+            <column caption='Contested' datatype='string' name='[contested]' role='dimension' type='nominal' />
+            <column-instance column='[contested]' derivation='None' name='[none:contested:nk]' pivot='key' type='nominal' />
+            <column-instance column='[result]' derivation='None' name='[none:result:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type]' derivation='None' name='[none:type:nk]' pivot='key' type='nominal' />
+            <column caption='Passes' datatype='integer' name='[passes]' role='measure' type='quantitative' />
+            <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+            <column caption='Screens' datatype='integer' name='[screens]' role='measure' type='quantitative' />
+            <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nf67000w5hs9516r7o8p1jhzvq8].[avg:passes:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nf67000w5hs9516r7o8p1jhzvq8].[avg:screens:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;none&quot;</bucket>
+              <bucket>&quot;low&quot;</bucket>
+              <bucket>&quot;med&quot;</bucket>
+              <bucket>&quot;high&quot;</bucket>
+              <bucket>%null%</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </sort>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:result:nk]' member='&quot;make&quot;' />
+              <groupfilter function='member' level='[none:result:nk]' member='&quot;miss&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:type:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:type:nk]' member='&quot;fb&quot;' />
+                <groupfilter function='member' level='[none:type:nk]' member='&quot;oreb&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk]</column>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[:Measure Names]</column>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[Multiple Values]' value='63' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[:Measure Names]' value='59' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.53773480653762817' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[Multiple Values]</rows>
+        <cols>([federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk] / ([federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk] / [federated.1nf67000w5hs9516r7o8p1jhzvq8].[:Measure Names]))</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gameData_edited' name='federated.1nf67000w5hs9516r7o8p1jhzvq8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nf67000w5hs9516r7o8p1jhzvq8'>
+            <column caption='passes+screens' datatype='integer' name='[Calculation_2257851527290048512]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[passes] + [screens]' />
+            </column>
+            <column caption='Contested' datatype='string' name='[contested]' role='dimension' type='nominal' />
+            <column caption='Game ID' datatype='date' name='[gameID]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2257851527290048512]' derivation='None' name='[none:Calculation_2257851527290048512:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[contested]' derivation='None' name='[none:contested:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gameID]' derivation='None' name='[none:gameID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[result]' derivation='None' name='[none:result:nk]' pivot='key' type='nominal' />
+            <column-instance column='[shooter]' derivation='None' name='[none:shooter:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[type]' derivation='None' name='[none:type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[xcoord]' derivation='None' name='[none:xcoord:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ycoord]' derivation='None' name='[none:ycoord:qk]' pivot='key' type='quantitative' />
+            <column caption='Passes' datatype='integer' name='[passes]' role='measure' type='quantitative' />
+            <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+            <column caption='Screens' datatype='integer' name='[screens]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Shooter' datatype='integer' name='[shooter]' role='dimension' type='ordinal' />
+            <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+            <column caption='Xcoord' datatype='integer' name='[xcoord]' role='measure' type='quantitative' />
+            <column caption='Ycoord' datatype='integer' name='[ycoord]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:gameID:qk]' included-values='in-range'>
+            <min>#2017-10-12#</min>
+            <max>#2017-10-29#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:result:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:result:nk]' member='&quot;foul&quot;' />
+                <groupfilter function='member' level='[none:result:nk]' member='&quot;to&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:shooter:ok]'>
+            <groupfilter function='level-members' level='[none:shooter:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:type:nk]' member='&quot;fb&quot;' />
+              <groupfilter function='member' level='[none:type:nk]' member='&quot;hw&quot;' />
+              <groupfilter function='member' level='[none:type:nk]' member='&quot;oreb&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]</column>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:shooter:ok]</column>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:gameID:qk]</column>
+            <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='subtitle' class='0' field='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:ycoord:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:ycoord:qk]' scope='rows' value='true' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]' />
+              <shape column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' />
+              <size column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Calculation_2257851527290048512:qk]' />
+              <lod column='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:ycoord:qk]</rows>
+        <cols>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:xcoord:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+    </worksheet>
+    <worksheet name='passes-hist'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gameData_edited' name='federated.1nf67000w5hs9516r7o8p1jhzvq8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nf67000w5hs9516r7o8p1jhzvq8'>
+            <column aggregation='None' datatype='integer' name='[Passes (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[passes]' peg='0' size='1.424' />
+            </column>
+            <column-instance column='[passes]' derivation='Count' name='[cnt:passes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Passes (bin)]' derivation='None' name='[none:Passes (bin):ok]' pivot='key' type='ordinal' />
+            <column caption='Passes' datatype='integer' name='[passes]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[cnt:passes:qk]</rows>
+        <cols>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Passes (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Passes (bin):qk]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='passes-hist'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:shooter:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' type='shape' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Calculation_2257851527290048512:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk]' type='filter' />
+            <card param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:gameID:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:shooter:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:contested:nk]' type='shape' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:Calculation_2257851527290048512:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:type:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1nf67000w5hs9516r7o8p1jhzvq8].[none:result:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
